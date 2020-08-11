@@ -7,6 +7,7 @@ public class Student {
     String name;
     int english;
     int math;
+    static int pass = 60;
 
     public Student(String name, int english, int math) {
         this.name = name;
@@ -15,6 +16,7 @@ public class Student {
     }
 
     public int highest(){
+
 //        int max = (english > math) ? english:math ;
 //        if (english > math){
 //            max = english;
@@ -27,7 +29,7 @@ public class Student {
     public void print(){
         int average = getAverage();
         System.out.println(name + "\t" + english + "\t" + math + "\t" + getAverage() + "\t" +
-                ( (average >= 60) ? "PASS" : "FAILED" ) );
+                ( (average >= pass) ? "PASS" : "FAILED" ) );
 //        if (getAverage() > 60){
 //            System.out.println("\tTURE");
 //        }else{
